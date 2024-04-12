@@ -20,6 +20,7 @@
 		4B4213EE2BC8DC15001B911C /* DecodableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4213ED2BC8DC15001B911C /* DecodableData.swift */; };
 		4B4213F12BC8DFCE001B911C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4213F02BC8DFCE001B911C /* Constants.swift */; };
 		4B4213F32BC8E10B001B911C /* MovieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4213F22BC8E10B001B911C /* MovieEndpoint.swift */; };
+		4B4213F72BC98978001B911C /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4213F62BC98978001B911C /* MovieResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		4B4213ED2BC8DC15001B911C /* DecodableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableData.swift; sourceTree = "<group>"; };
 		4B4213F02BC8DFCE001B911C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4B4213F22BC8E10B001B911C /* MovieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndpoint.swift; sourceTree = "<group>"; };
+		4B4213F62BC98978001B911C /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		4B4213D02BC805C6001B911C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4B4213F52BC988E3001B911C /* Models */,
 				4B4213E82BC8DBB6001B911C /* Network */,
 			);
 			path = Data;
@@ -215,6 +218,14 @@
 				4B4213F22BC8E10B001B911C /* MovieEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		4B4213F52BC988E3001B911C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B4213F62BC98978001B911C /* MovieResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +364,7 @@
 				4B4213EE2BC8DC15001B911C /* DecodableData.swift in Sources */,
 				4B4213F12BC8DFCE001B911C /* Constants.swift in Sources */,
 				4B4213EA2BC8DBD5001B911C /* NetworkClient.swift in Sources */,
+				4B4213F72BC98978001B911C /* MovieResponse.swift in Sources */,
 				4B4213EC2BC8DBF4001B911C /* NetworkError.swift in Sources */,
 				4B4213F32BC8E10B001B911C /* MovieEndpoint.swift in Sources */,
 			);
