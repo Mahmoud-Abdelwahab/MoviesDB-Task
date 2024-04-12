@@ -9,7 +9,7 @@ import Foundation
 
 
 enum MovieEndpoint {
-    case fetchTrendingMovies
+    case fetchTrendingMovies(page: String)
     case fetchMovieDetails(movieId: String)
 }
 
@@ -29,10 +29,14 @@ extension MovieEndpoint {
     }
     
     var parameters: [String: String] {
+        var params = ["api_key": Constants.API_KEY]
         switch self {
-        case .fetchTrendingMovies, .fetchMovieDetails:
-            return ["api_key": Constants.API_KEY]
-        }
+         case .fetchTrendingMovies(let page):
+             params["page"] = String(page)
+         default:
+             break
+         }
+         return params
     }
     
     func makeURL() -> URL? {

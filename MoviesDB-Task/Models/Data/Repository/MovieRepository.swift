@@ -23,8 +23,8 @@ class MovieRepository: MovieRepositoryType {
 
 extension MovieRepository {
     
-    func fetchTrendingMovies() async throws -> MovieListResponse {
-        try await remoteDataSource.fetchTrendingMovies()
+    func fetchTrendingMovies(page: String) async throws -> MovieListResponse {
+        try await remoteDataSource.fetchTrendingMovies(page: page)
     }
     
     func fetchMovieDetails(movieId: String) async throws -> MovieResponse {

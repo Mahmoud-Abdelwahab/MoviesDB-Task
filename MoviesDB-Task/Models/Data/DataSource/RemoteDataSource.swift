@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RemoteDataSourceType {
-    func fetchTrendingMovies() async throws -> MovieListResponse
+    func fetchTrendingMovies(page: String) async throws -> MovieListResponse
     func fetchMovieDetails(movieId: String) async throws -> MovieResponse
 }
 
@@ -26,8 +26,8 @@ class RemoteDataSource: RemoteDataSourceType {
 
 extension RemoteDataSource {
   
-    func fetchTrendingMovies() async throws -> MovieListResponse {
-        try await networkClient.request(.fetchTrendingMovies)
+    func fetchTrendingMovies(page: String) async throws -> MovieListResponse {
+        try await networkClient.request(.fetchTrendingMovies(page: page))
     }
     
     func fetchMovieDetails(movieId: String) async throws -> MovieResponse {

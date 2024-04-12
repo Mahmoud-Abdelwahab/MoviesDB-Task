@@ -10,6 +10,6 @@ import Foundation
 ///  ` If caching needed we can  add Local Data Source in the future here
 ///
 protocol MovieRepositoryType {
-    func fetchTrendingMovies() async throws -> MovieListResponse
+    func fetchTrendingMovies(page: String) async throws -> MovieListResponse
     func fetchMovieDetails(movieId: String) async throws -> MovieResponse
 }
