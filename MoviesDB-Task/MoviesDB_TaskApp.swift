@@ -11,7 +11,7 @@ import SwiftUI
 struct MoviesDB_TaskApp: App {
     var body: some Scene {
         WindowGroup {
-            MovieList()
+            MovieList(viewModel: MovieListViewModel())
         }
     }
 }

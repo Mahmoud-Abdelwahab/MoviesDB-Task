@@ -7,18 +7,24 @@
 
 import SwiftUI
 struct MovieList: View {
-    
+    @ObservedObject var viewModel: MovieListViewModel
     var body: some View {
         NavigationView {
-            List(0..<10) { item in
-                Text("movie \(item)")
+            List(viewModel.movies) { movie in
+                MovieCell(movie: movie)
+               // NavigationLink(destination: MovieDetailsView(movie: movie)) {
+                //    MovieCell(movie: movie)
+              //  }
             }
             .navigationBarTitle("Trending Movies")
+        }
+        .task {
+            await viewModel.fetchMovies()
         }
 
     }
 }
 
 #Preview {
-    MovieList()
+    MovieList(viewModel: MovieListViewModel())
 }

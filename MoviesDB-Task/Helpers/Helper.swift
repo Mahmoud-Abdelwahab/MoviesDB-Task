@@ -10,11 +10,15 @@ import Foundation
 struct Helper {
     
    static func getYear(from dateString: String) -> String? {
-        let formatter = ISO8601DateFormatter()
-        formatter.formatOptions = [.withYear]
-        if let date = formatter.date(from: dateString) {
-            return String(Calendar.current.component(.year, from: date))
-        }
-        return nil
+       let dateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "yyyy-MM-dd"
+          
+          if let date = dateFormatter.date(from: dateString) {
+              let calendar = Calendar.current
+              let year = calendar.component(.year, from: date)
+              return "\(year)"
+          } else {
+              return nil
+          }
     }
 }
