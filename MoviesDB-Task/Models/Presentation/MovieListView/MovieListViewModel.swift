@@ -10,9 +10,9 @@ import Foundation
 class MovieListViewModel: ObservableObject {
     @Published var movies: [Movie] = []
     
-    private let movieUseCase: TrendingMovieUsecaseType
+    private let movieUseCase: TrendingMovieUsecase
     
-    init(movieUseCase: TrendingMovieUsecaseType = TrendingMovieUsecase()) {
+    init(movieUseCase: TrendingMovieUsecase = TrendingMovieUsecase()) {
         self.movieUseCase = movieUseCase
     }
     

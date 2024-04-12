@@ -7,16 +7,18 @@
 
 import Foundation
 
-class MovieDetailsUsecase {
+class MovieDetailsUsecase: UseCaseType {
     private let repository: MovieRepositoryType
-    
+    private let movieId: String
     init(
-        repository: MovieRepositoryType = MovieRepository()
+        repository: MovieRepositoryType = MovieRepository(),
+        movieId: String
     ){
         self.repository = repository
+        self.movieId = movieId
     }
     
-    func excute(movieId: String) async throws -> Movie {
+    func excute() async throws -> Movie {
      let model =  try await repository
              .fetchMovieDetails(movieId: movieId)
         return  Movie(id: model.id,

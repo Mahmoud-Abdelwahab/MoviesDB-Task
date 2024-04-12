@@ -30,7 +30,7 @@ struct MovieCell: View {
                 Text(movie.title)
                     .font(.headline)
                     .fontWeight(.bold)
-                Text(movie.displayedDate ?? "---")
+                Text(movie.displayedDate ?? "- - -")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
