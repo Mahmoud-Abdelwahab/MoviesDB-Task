@@ -14,8 +14,6 @@ protocol DecodableDataProtocol {
 }
 
 
-import Foundation
-
 struct DecodableData<T: Decodable>: DecodableDataProtocol {
     static func decode(data: Data) throws -> T {
         do {

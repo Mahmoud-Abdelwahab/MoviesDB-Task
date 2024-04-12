@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct MovieList: View {
     
     var body: some View {
@@ -16,6 +15,7 @@ struct MovieList: View {
             }
             .navigationBarTitle("Trending Movies")
         }
+
     }
 }
 

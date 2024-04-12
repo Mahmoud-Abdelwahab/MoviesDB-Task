@@ -8,17 +8,22 @@
 import Foundation
 
 protocol NetworkClientType {
-    func fetchData<T: Decodable>(from url: URL) async throws -> T
+    func request<T: Decodable>(_ endpoint: MovieEndpoint) async throws -> T
 }
 
 class NetworkClient: NetworkClientType {
     
-    func fetchData<T: Decodable>(from url: URL) async throws -> T {
-        do {
+    func request<T: Decodable>(_ endpoint: MovieEndpoint) async throws -> T {
+            guard let url = endpoint.makeURL() else {
+                throw NetworkError.init(localizedDescription: "Invalid Data")
+            }
+            
             let (data, _) = try await URLSession.shared.data(from: url)
-            return try DecodableData<T>.decode(data: data)
-        } catch let error {
-            throw NetworkError(localizedDescription: error.localizedDescription)
+            
+            do {
+                return try DecodableData.decode(data: data)
+            } catch {
+                throw NetworkError(localizedDescription: error.localizedDescription)
+            }
         }
-    }
 }
