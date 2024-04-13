@@ -7,7 +7,11 @@
 
 import Foundation
 
-class MovieDetailsUsecase: UseCaseType {
+protocol MovieDetailsUsecaseType {
+    func excute() async throws -> Movie
+}
+
+class MovieDetailsUsecase: MovieDetailsUsecaseType {
     private let repository: MovieRepositoryType
     private let movieId: String
     init(

@@ -8,22 +8,27 @@
 import Foundation
 
 class MovieListViewModel: ObservableObject {
+    
     @Published var movies: [Movie] = []
+    @Published var errorMessage: String?
+    @Published var showAlert = false
     
-    private let movieUseCase: TrendingMovieUsecase
+    private let movieUseCase: TrendingMovieUsecaseType
     
-    init(movieUseCase: TrendingMovieUsecase = TrendingMovieUsecase()) {
+    init(movieUseCase: TrendingMovieUsecaseType = TrendingMovieUsecase()) {
         self.movieUseCase = movieUseCase
     }
     
     @MainActor
     func fetchMovies() async{
-            do {
-                if let result =  try await  movieUseCase.excute() {
-                    movies += result
-                }
-            } catch {
-                print("Error:", error.localizedDescription)
+        do {
+            if let result =  try await  movieUseCase.excute() {
+                movies += result
             }
+        } catch {
+            print("Error:", error.localizedDescription)
+            showAlert = true
+            errorMessage = error.localizedDescription
+        }
     }
 }

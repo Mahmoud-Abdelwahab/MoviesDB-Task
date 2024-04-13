@@ -3,4 +3,54 @@
    uuid = "B8C47740-A3DE-402E-9CB8-45366B89F847"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40A72681-8103-4F5B-A24D-DE965AE171BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDB-Task/Models/Presentation/MovieListView/MovieListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetchMovies()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "40A72681-8103-4F5B-A24D-DE965AE171BB - 8603c2949dfb7b2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for MoviesDB_Task.MovieListViewModel.fetchMovies() async -&gt; ()"
+                  moduleName = "MoviesDB-Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab/Desktop/MoviesDB-Task/MoviesDB-Task/Models/Presentation/MovieListView/MovieListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "612">
+               </Location>
+               <Location
+                  uuid = "40A72681-8103-4F5B-A24D-DE965AE171BB - 8603c2949dfb7b2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for MoviesDB_Task.MovieListViewModel.fetchMovies() async -&gt; ()"
+                  moduleName = "MoviesDB-Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab/Desktop/MoviesDB-Task/MoviesDB-Task/Models/Presentation/MovieListView/MovieListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "600">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

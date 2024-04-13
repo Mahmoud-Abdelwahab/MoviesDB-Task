@@ -10,9 +10,9 @@ import Foundation
 class MovieDetailsViewModel: ObservableObject {
     @Published var movie: Movie?
     
-    private let movieDetailsUseCase: MovieDetailsUsecase
+    private let movieDetailsUseCase: MovieDetailsUsecaseType
     
-    init(movieDetailsUseCase: MovieDetailsUsecase) {
+    init(movieDetailsUseCase: MovieDetailsUsecaseType) {
         self.movieDetailsUseCase = movieDetailsUseCase
     }
     

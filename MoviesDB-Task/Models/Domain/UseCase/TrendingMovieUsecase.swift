@@ -7,8 +7,11 @@
 
 import Foundation
 
+protocol TrendingMovieUsecaseType {
+    func excute() async throws -> [Movie]?
+}
 
-class TrendingMovieUsecase: UseCaseType {
+class TrendingMovieUsecase: TrendingMovieUsecaseType {
     
     private let repository: MovieRepositoryType
     private var hasMorePage = true

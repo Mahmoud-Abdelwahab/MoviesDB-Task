@@ -7,15 +7,17 @@
 
 import SwiftUI
 struct MovieList: View {
-    @ObservedObject var viewModel: MovieListViewModel
+    @StateObject var viewModel: MovieListViewModel
     
     var body: some View {
         NavigationView {
             content
             .navigationBarTitle("Trending Movies")
-        }
-        .task {
-            await viewModel.fetchMovies()
+            .alert(viewModel.errorMessage ?? "", isPresented: $viewModel.showAlert) {
+                        Button("OK", role: .cancel) {
+                            viewModel.showAlert = false
+                        }
+                    }
         }
     }
 }
@@ -40,6 +42,14 @@ extension MovieList {
                 await viewModel.fetchMovies()
             }
     }
+    
+//    @ViewBuilder
+//      private var alertView: some View {
+//          if let errorMessage = viewModel.errorMessage {
+//              Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+//
+//          }
+//      }
 }
 
 #Preview {
