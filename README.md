@@ -27,5 +27,7 @@ Clean Code: Emphasis is placed on writing clean, readable, and maintainable code
 
 # Testing
 The project includes simple mocks and unit tests to ensure the correctness of critical components.
-# We can use DI framwork like swinject for managing Dependancies easily 
-# if the app become bigger we can separate each Layer in single SPM 
+
+*  We can use DI framwork like swinject for managing Dependancies easily 
+*  if the app become bigger we can separate each Layer in single SPM
+*  we can add github action for automaing runing tests and providing build to testflight whever we merge PR to develop Branch
